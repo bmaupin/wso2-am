@@ -42,7 +42,7 @@ Example Playbook
 ----------------
 
     ---
-    - hosts: *
+    - hosts: all
       roles:
         - { role: klousiaj.wso2-am, wso2_app: "wso2am", wso2_app_version: "1.9.1"}
 
