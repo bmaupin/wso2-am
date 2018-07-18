@@ -4,7 +4,7 @@ A role that installs an instance of the specified WSO2 product on CentOS. An exa
 
 Requirements
 ------------
-Created and validated to run on Ansible v1.9.4
+Created and validated to run on Ansible v1.9.4, v2.5.5
 
 This role assumes that a Java JDK has already been installed on the target machine. If it doesn't already exist, a new service user will be created. By default, this user is created as `wso2`. The installation zip file is not downloaded from the WSO2 website. It must be provided and is assumed to be named as `<wso2app>-<wso2_version>.zip` in the `files` directory. This can be overwritten by setting the `wso2_app_archive` variable.
 
@@ -27,7 +27,7 @@ The following variables are defined in the `defaults/main.yml` file.
     
     # wso2
     wso2_app: wso2am
-    wso2_app_version: 1.9.1
+    wso2_app_version: 2.5.0
     wso2_app_directory: "{{wso2_app}}-{{ wso2_app_version }}"
     wso2_app_offset: 0
     wso2_app_https_port: "{{ (wso2_default_https_port|int) + (wso2_app_offset|int) }}"
@@ -44,7 +44,7 @@ Example Playbook
     ---
     - hosts: all
       roles:
-        - { role: klousiaj.wso2-am, wso2_app: "wso2am", wso2_app_version: "1.9.1"}
+        - { role: klousiaj.wso2-am, wso2_app: "wso2am", wso2_app_version: "2.5.0"}
 
 License
 -------

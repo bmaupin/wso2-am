@@ -13,7 +13,7 @@ java_home: "/usr/java/default"
 
 # wso2
 wso2_app: wso2am
-wso2_app_version: 1.9.1
+wso2_app_version: 2.5.0
 wso2_app_directory: "{{wso2_app}}-{{ wso2_app_version }}"
 wso2_app_offset: 0
 wso2_app_https_port: "{{ (wso2_default_https_port|int) + (wso2_app_offset|int) }}"
